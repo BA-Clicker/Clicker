@@ -59,7 +59,7 @@ function buyNewAvatar() {
         localStorage.setItem('money', money); // Сохраняем новое значение денег
         document.getElementById('money').innerText = money;
 
-        clickValue *= 2; // Увеличиваем значение клика вдвое
+        clickValue++; // Увеличиваем значение клика на 1
         localStorage.setItem('clickValue', clickValue);
         localStorage.setItem('avatarCost', avatarCost);
 
