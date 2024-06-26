@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВА Кликер</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/waff.png" type="image/png" sizes="512x512">
+</head>
+<body>
+    <div class="container">
+        <div id="top-bar">
+            <img src="images/obmen.png" id="exchange-btn" onclick="exchangeClicks()" alt="Обмен">
+            <img src="images/magaz.png" id="shop-btn" onclick="toggleShop()" alt="Магазин">
+            <div id="currency-container">
+                <img src="images/cherru.png" alt="Черр">
+                <span id="money">0</span>
+            </div>
+        </div>
+        <div id="avatars-container">
+            <img src="sprites/avatar1.png" alt="Фред" class="avatar" onclick="handleClick('avatar1')">
+            <img src="sprites/avatar2.png" alt="Аватар 2" class="avatar" onclick="handleClick('avatar2')">
+            <img src="sprites/avatar3.png" alt="Аватар 3" class="avatar" onclick="handleClick('avatar3')">
+        </div>
+        <p>Количество кликов:</p>
+        <p>Фред: <span id="counter-avatar1">0</span></p>
+        <p>Аватар 2: <span id="counter-avatar2">0</span></p>
+        <p>Аватар 3: <span id="counter-avatar3">0</span></p>
+        <div id="shop" style="display: none;">
+            <h2>Магазин</h2>
+            <button onclick="buyNewAvatar()">Купить новый аватар (1000 черр)</button>
+            <button onclick="buyUpgrade()">Купить улучшение кликов (+1 клик за нажатие, цена 1000 черр)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+          </html>
+          
