@@ -19,14 +19,6 @@ function handleClick() {
         alert("Зачем ты нажал на пнг картинки 1 миллион раз?");
         localStorage.setItem('millionMessageShown', true);
     }
-
-    // Анимация смены аватара
-    const avatarImage = document.querySelector('.avatar');
-    avatarImage.src = `sprites/avatar.gif`; // Показываем анимацию
-
-    setTimeout(() => {
-        avatarImage.src = `sprites/avatar1.png`; // Возвращаем оригинальный аватар после анимации
-    }, 1000);
 }
 
 // Функция обмена кликов на деньги
@@ -67,8 +59,7 @@ function buyNewAvatar() {
         localStorage.setItem('money', money); // Сохраняем новое значение денег
         document.getElementById('money').innerText = money;
 
-        clickValue++; // Увеличиваем значение клика
-        avatarCost += 1000; // Увеличиваем стоимость следующего аватара
+        clickValue *= 2; // Увеличиваем значение клика вдвое
         localStorage.setItem('clickValue', clickValue);
         localStorage.setItem('avatarCost', avatarCost);
 
@@ -90,4 +81,4 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
-        
+    
