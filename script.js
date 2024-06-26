@@ -20,6 +20,7 @@ function handleClick() {
         localStorage.setItem('millionMessageShown', true);
     }
 
+    // Анимация смены аватара
     const avatarImage = document.querySelector('.avatar');
     avatarImage.src = `sprites/avatar.gif`;
 
@@ -83,4 +84,9 @@ function buyNewAvatar() {
 
 // Инициализация клика на аватар
 document.querySelector('.avatar').addEventListener('click', handleClick);
-    
+
+// Запрет скачивания изображений
+document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('contextmenu', (e) => e.preventDefault());
+});
