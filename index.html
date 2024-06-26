@@ -18,16 +18,16 @@
             </div>
         </div>
         <div id="avatars-container">
-            <img src="sprites/avatar1.png" alt="avatar" class="avatar" onclick="handleClick('avatar')">
+            <img src="sprites/avatar1.png" alt="Аватар" class="avatar" onclick="handleClick()">
         </div>
         <p>Количество кликов: <span id="clicks">0</span></p>
         <div id="shop" style="display: none;">
             <h2>Магазин</h2>
-            <button onclick="buyNewAvatar()">Купить новый аватар (1000 черр)</button>
+            <button onclick="buyNewAvatar()">Купить новый аватар (+1 клик за нажатие, цена 1000 черр)</button>
         </div>
         <div id="exchange" style="display: none;">
-            <h2>Обмен валюты</h2>
-            <p>10 <img src="images/cursor.png" alt="Клик"> - 1 <img src="images/cherru.png" alt="Черр"></p>
+            <h2>Обмен</h2>
+            <p>10 <img src="images/cursor.png" alt="Курсор"> - 1 <img src="images/cherru.png" alt="Черр"></p>
             <button onclick="exchangeClicks()">Обменять</button>
         </div>
     </div>
