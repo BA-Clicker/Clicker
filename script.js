@@ -22,10 +22,10 @@ function handleClick() {
 
     // Анимация смены аватара
     const avatarImage = document.querySelector('.avatar');
-    avatarImage.src = `sprites/avatar.gif`;
+    avatarImage.src = `sprites/avatar.gif`; // Показываем анимацию
 
     setTimeout(() => {
-        avatarImage.src = `sprites/avatar.png`;
+        avatarImage.src = `sprites/avatar1.png`; // Возвращаем оригинальный аватар после анимации
     }, 1000);
 }
 
@@ -90,3 +90,4 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
+        
