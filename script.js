@@ -59,10 +59,16 @@ function buyNewAvatar() {
         localStorage.setItem('money', money); // Сохраняем новое значение денег
         document.getElementById('money').innerText = money;
 
-        clickValue++; // Увеличиваем значение клика на 1
-        avatarCost += 1000; // Увеличиваем стоимость следующего аватара на 1000
+        // Увеличиваем значение клика на 1, проверяем правильность увеличения
+        clickValue++;
         localStorage.setItem('clickValue', clickValue);
+        
+        // Увеличиваем стоимость следующего аватара на 1000
+        avatarCost += 1000;
         localStorage.setItem('avatarCost', avatarCost);
+
+        // Отладочное сообщение
+        console.log(`Куплен новый аватар! clickValue: ${clickValue}, avatarCost: ${avatarCost}, money: ${money}`);
 
         alert(`Улучшение куплено! Теперь за каждый клик вы получаете ${clickValue} кликов.`);
 
@@ -82,4 +88,4 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
-    
+                     
