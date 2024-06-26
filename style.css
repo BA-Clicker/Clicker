@@ -37,8 +37,8 @@ body {
 }
 
 #currency-container img {
-    width: 2px;
-    height: 2px;
+    width: 20px;  /* Увеличение ширины до 20 пикселей */
+    height: 20px; /* Увеличение высоты до 20 пикселей */
     margin-right: 5px;
 }
 
