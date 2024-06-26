@@ -60,6 +60,7 @@ function buyNewAvatar() {
         document.getElementById('money').innerText = money;
 
         clickValue++; // Увеличиваем значение клика на 1
+        avatarCost += 1000; // Увеличиваем стоимость следующего аватара на 1000
         localStorage.setItem('clickValue', clickValue);
         localStorage.setItem('avatarCost', avatarCost);
 
@@ -81,4 +82,4 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
-    
+        
