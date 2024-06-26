@@ -37,8 +37,8 @@ body {
 }
 
 #currency-container img {
-    width: 1px;  /* Changed size of cherru image */
-    height: 1px; /* Changed size of cherru image */
+    width: 20px;  /* Увеличение ширины до 20 пикселей */
+    height: 20px; /* Увеличение высоты до 20 пикселей */
     margin-right: 5px;
 }
 
@@ -56,15 +56,29 @@ body {
     margin: 0 10px;
 }
 
-#shop {
+#shop, #exchange {
     background-color: white;
     color: black;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    width: 300px; /* Adjustable width */
 }
 
-#exchange img {
-    width: 1px;  /* Changed size of cursor image */
-    height: 1px; /* Changed size of cursor image */
+#shop h2, #exchange h2 {
+    margin-top: 0;
+}
+
+#shop button, #exchange button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: pink;
+    color: white;
+    font-size: 16px;
+}
+
+#shop button:hover, #exchange button:hover {
+    background-color: darkpink;
 }
