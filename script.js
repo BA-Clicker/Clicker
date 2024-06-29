@@ -54,7 +54,7 @@ function toggleExchange() {
 function buyNewAvatar() {
     if (money >= avatarCost) {
         // Увеличиваем значение клика на 1
-        clickValue += 1; 
+        clickValue = clickValue + 1; 
         localStorage.setItem('clickValue', clickValue);
 
         money -= avatarCost; 
