@@ -10,10 +10,10 @@ document.getElementById('money').innerText = money;
 
 // Функция обработки кликов на аватар
 function handleClick() {
-    totalClicks += clickValue; // Увеличиваем количество кликов на значение clickValue
-    localStorage.setItem('totalClicks', totalClicks); // Сохраняем в localStorage
+    totalClicks += clickValue; 
+    localStorage.setItem('totalClicks', totalClicks); 
 
-    document.getElementById('clicks').innerText = totalClicks; // Обновляем отображение кликов
+    document.getElementById('clicks').innerText = totalClicks; 
 
     if (totalClicks >= 1000000 && !localStorage.getItem('millionMessageShown')) {
         alert("Зачем ты нажал на пнг картинки 1 миллион раз?");
@@ -24,15 +24,13 @@ function handleClick() {
 // Функция обмена кликов на деньги
 function exchangeClicks() {
     if (totalClicks >= 10) {
-        let exchangedMoney = Math.floor(totalClicks / 10); // Рассчитываем количество черр
-        money += exchangedMoney; // Добавляем черр к общему количеству
-        totalClicks -= exchangedMoney * 10; // Уменьшаем количество кликов
+        let exchangedMoney = Math.floor(totalClicks / 10); 
+        money += exchangedMoney; 
+        totalClicks -= exchangedMoney * 10; 
 
-        // Обновляем значения в localStorage
         localStorage.setItem('totalClicks', totalClicks);
         localStorage.setItem('money', money);
 
-        // Обновляем отображение на экране
         document.getElementById('clicks').innerText = totalClicks;
         document.getElementById('money').innerText = money;
     } else {
@@ -55,24 +53,21 @@ function toggleExchange() {
 // Функция покупки нового аватара
 function buyNewAvatar() {
     if (money >= avatarCost) {
-        money -= avatarCost; // Вычитаем стоимость аватара из черр
-        localStorage.setItem('money', money); // Сохраняем новое значение денег
+        money -= avatarCost; 
+        localStorage.setItem('money', money); 
         document.getElementById('money').innerText = money;
 
-        // Увеличиваем значение клика на 1, проверяем правильность увеличения
-        clickValue++;
+        // Увеличиваем значение клика на 1
+        clickValue += 1; 
         localStorage.setItem('clickValue', clickValue);
         
-        // Увеличиваем стоимость следующего аватара на 1000
         avatarCost += 1000;
         localStorage.setItem('avatarCost', avatarCost);
 
-        // Отладочное сообщение
         console.log(`Куплен новый аватар! clickValue: ${clickValue}, avatarCost: ${avatarCost}, money: ${money}`);
 
         alert(`Улучшение куплено! Теперь за каждый клик вы получаете ${clickValue} кликов.`);
 
-        // Заменяем текущий аватар на новый
         const avatarImage = document.querySelector('.avatar');
         avatarImage.src = `sprites/avatar${clickValue}.png`;
     } else {
@@ -88,4 +83,3 @@ document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', 'false');
     img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
-                     
