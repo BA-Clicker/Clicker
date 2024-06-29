@@ -53,14 +53,13 @@ function toggleExchange() {
 // Функция покупки нового аватара
 function buyNewAvatar() {
     if (money >= avatarCost) {
-        money -= avatarCost; 
-        localStorage.setItem('money', money); 
-        document.getElementById('money').innerText = money;
-
         // Увеличиваем значение клика на 1
         clickValue += 1; 
         localStorage.setItem('clickValue', clickValue);
-        
+
+        money -= avatarCost; 
+        localStorage.setItem('money', money); 
+
         avatarCost += 1000;
         localStorage.setItem('avatarCost', avatarCost);
 
